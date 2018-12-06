@@ -1,10 +1,14 @@
-page = input("Enter something: ")
-print(page)
-pagenum = 0
+def main():
+    page = input("Enter something: ")
+    print(count_symbols(page))
 
+def count_symbols(page):
+    pagenum = 1
+    if len(page) % 2 == 0:
+        print(page)
+        print("%-9s"%(pagenum))
+    else:
+        print(page)
+        print("%60s%d" % (" ", pagenum))
 
-if page % 2 == 0:
-    print(page)
-else:
-    print("%60s%d" % (" ", page))
-# input something = page, page number should be in the next row.
+main()
